@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features</title>
+    <style>
+        body {
+            background-color: #E5E7EB;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        .title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        @media (min-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        .card {
+            background-color: #FFFFFF;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .card i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .card h2 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .card p {
+            color: #4B5563;
+            margin-bottom: 1rem;
+        }
+        .card textarea,
+        .card input[type="file"] {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #D1D5DB;
+            border-radius: 0.25rem;
+            margin-bottom: 1rem;
+        }
+        .card button {
+            background-color: #000000;
+            color: #FFFFFF;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Features</h1>
+        <div class="grid">
+            <!-- Text-to-Speech Card -->
+            <div class="card">
+                <i class="fas fa-volume-up"></i>
+                <h2>Text-to-Speech</h2>
+                <p>Convert written text into speech for visually impaired students.</p>
+                <textarea rows="4" placeholder="Enter text here..."></textarea>
+                <button>Convert</button>
+            </div>
+            <!-- Sign Language Card -->
+            <div class="card">
+                <i class="fas fa-sign-language"></i>
+                <h2>Sign Language</h2>
+                <p>Watch sign language tutorials.</p>
+                <video class="w-full rounded" controls>
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <!-- Subtitles Card -->
+            <div class="card">
+                <i class="fas fa-closed-captioning"></i>
+                <h2>Subtitles</h2>
+                <p>Upload a video to generate subtitles.</p>
+                <input type="file">
+                <button>Upload</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
